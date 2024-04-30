@@ -4,8 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/funcion.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
+    <!-- ------------------------------------------------------------------- -->
+    <header>
+
+    </header>
+    <!-- ------------------------------------------------------------------- -->
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <form action="" method="POST" class="col-md-4 mx-auto shadow-lg text-center mt-3 p-5">
+                    <h3>Login</h3>
+                    <div class="form-floating col-6 mx-auto mb-2">
+                        <input type="text" class="form-control" name="rut" id="rut" placeholder="Ingrese rut"
+                            required>
+                        <label for="rut">Rut</label>
+                    </div>
+                    <div class="form-floating col-6 mx-auto mb-2">
+                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese nombre"
+                            required>
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    <div class="form-floating col-6 mx-auto mb-2">
+                        <input type="text" class="form-control" name="appaterno" id="apmaterno" placeholder="Ingrese apellido paterno"
+                            required>
+                        <label for="appatero">Apellido paterno</label>
+                    </div>
+                    <div class="form-floating col-6 mx-auto mb-2">
+                        <input type="text" class="form-control" name="apmaterno" id="apmaterno" placeholder="Ingrese apellido materno"
+                            required>
+                        <label for="apmaterno">Apellido materno</label>
+                    </div>
+                    <div class="form-floating col-6 mx-auto mb-2">
+                        <input type="password" class="form-control" name="pass" id="pass" placeholder="Ingrese contraseña">
     
+                        <label for="pass">Contraseña:</label>
+                    </div>
+                    <div class="form-floating col-6 mx-auto mb-2">
+                        <select name="optRol" id="optRol" class="form-select">
+                            <option value="1">Femenino</option>
+                            <option value="2">Masculino</option>
+                            <option value="3">Prefiero no responder</option>
+                        </select>
+                        <label for="optRol">Género</label>
+                    </div>
+                    <div id="resultado">
+                    </div>
+                    <div class="form-group col-6 mx-auto">
+                        <input type="submit" value="Ingresar" class="btn btn-outline-primary" onclick="validar()">
+                        <input type="reset" value="Limpiar" class="btn btn-outline-warning">
+                        <button type="button" onclick="validar()" class="btn btn-outline-success">Validar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- ------------------------------------------------------------------- -->
+    <footer>
+
+    </footer>
+    <!-- ------------------------------------------------------------------- -->
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
