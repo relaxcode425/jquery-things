@@ -18,7 +18,7 @@
     <main>
         <div class="container-fluid">
             <div class="row">
-                <form action="" method="POST" class="col-md-4 mx-auto shadow-lg text-center mt-3 p-5">
+                <form action="" method="POST" class="col-md-6 mx-auto shadow-lg text-center mt-3 p-5">
                     <h3>Login</h3>
                     <div class="form-floating col-6 mx-auto mb-2">
                         <input type="text" class="form-control" name="rut" id="rut" placeholder="Ingrese rut"
@@ -30,20 +30,38 @@
                             required>
                         <label for="nombre">Nombre</label>
                     </div>
-                    <div class="form-floating col-6 mx-auto mb-2">
-                        <input type="text" class="form-control" name="appaterno" id="apmaterno" placeholder="Ingrese apellido paterno"
-                            required>
-                        <label for="appatero">Apellido paterno</label>
+                    <div class="d-flex">
+                        <div class="col-6 me-1">
+                            <div class="form-floating col-10 ms-auto mb-2">
+                                <input type="text" class="form-control" name="appaterno" id="apmaterno" placeholder="Ingrese apellido paterno"
+                                    required>
+                                <label for="appatero">Apellido Paterno</label>
+                            </div>
+                        </div>
+                        <div class="col-6 ms-1">
+                            <div class="form-floating col-10 me-auto mb-2">
+                                <input type="text" class="form-control" name="apmaterno" id="apmaterno" placeholder="Ingrese apellido materno"
+                                    required>
+                                <label for="apmaterno">Apellido Materno</label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-floating col-6 mx-auto mb-2">
-                        <input type="text" class="form-control" name="apmaterno" id="apmaterno" placeholder="Ingrese apellido materno"
-                            required>
-                        <label for="apmaterno">Apellido materno</label>
-                    </div>
-                    <div class="form-floating col-6 mx-auto mb-2">
-                        <input type="number" class="form-control" name="edad" id="edad" placeholder="Ingrese edad"
-                            required>
-                        <label for="edad">Edad</label>
+                    <div class="d-flex">
+                        <div class="col-6 me-1">
+                                <div class="form-floating col-6 ms-auto mb-2">
+                                <input type="date" class="form-control" name="fecnac" id="fecnac" placeholder="Ingrese Fecha de nacimiento"
+                                    required>
+                                <label for="fecnac">Fecha de nacimiento</label>
+                            </div>
+                        </div>
+                    
+                        <div class="col-6 ms-1">
+                            <div class="form-floating col-6 me-auto mb-2">
+                                <input type="number" class="form-control" name="edad" id="edad" placeholder="Ingrese edad"
+                                    required>
+                                <label for="edad">Edad</label>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-floating col-6 mx-auto mb-2">
                         <select name="opgen" id="opgen" class="form-select">
@@ -54,16 +72,30 @@
                         <label for="opgen">Género</label>
                     </div>
                     <div class="form-floating col-6 mx-auto mb-2">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Ingrese email"
+                            required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-floating col-6 mx-auto mb-2">
                         <input type="number" class="form-control" name="celular" id="celular" placeholder="Ingrese número de teléfono"
                             required>
                         <label for="celular">Celular</label>
                     </div>
-                    <div id="resultado">
+                    <div class="form-floating col-6 mx-auto mb-2">
+                        <input type="text" class="form-control" name="profesion" id="profesion" placeholder="Ingrese su profesión"
+                            required>
+                        <label for="profesion">Profesión</label>
                     </div>
+                    <div class="form-floating col-6 mx-auto mb-2" >
+                        <textarea class="form-control" name="motivacion" id="motivacion" placeholder="Ingrese su motivación para postular"
+                            required style= "height: 200px;resize: none;"></textarea>
+                        <label for="motivacion">Motivación para postular</label>
+                    </div>                    
+                    
                     <div class="form-group col-6 mx-auto">
-                        <input type="submit" value="Ingresar" class="btn btn-outline-primary" onclick="validar()">
+                        <input type="submit" value="Ingresar" id="btnEnviar" class="btn btn-outline-primary" onclick="validar()">
                         <input type="reset" value="Limpiar" class="btn btn-outline-warning">
-                        <button type="button" onclick="validar()" class="btn btn-outline-success">Validar</button>
+                        <button type="button" id="btnValidar" class="btn btn-outline-success">Validar</button>
                     </div>
                 </form>
             </div>
